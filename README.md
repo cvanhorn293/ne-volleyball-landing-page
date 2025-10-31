@@ -1,5 +1,7 @@
 # Application Changelog
 
+This will show the different changes done for the application. This will include assignment specific changes, what the assignment was, and when it was due. It will also have non-specific assignment updates that were done to make the landing page.
+
 ## Oct 30, 2025
 
 - More file restructure
