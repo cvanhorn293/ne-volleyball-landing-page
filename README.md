@@ -12,8 +12,8 @@ This will show the different changes done for the application. This will include
 
 ### Assignment specific changes (Add Media Query to Landing Page: Due 11.1)
 
-- Added media query for "carousel"
-  - 80% to full width
+- Added media query for "navbar"
+  - display:none links on mobile
 
 ## Oct 28, 2025
 

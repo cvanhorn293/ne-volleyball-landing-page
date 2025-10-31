@@ -11,12 +11,14 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    /* Global Variables */
+    --primary-nebraska-red: #d10000;
 }
 
-body {
+* {
+    padding: 0;
     margin: 0;
-    display: flex;
-    place-items: center;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,0 +1,59 @@
+nav {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-nebraska-red);
+    padding: 1.3em 2em;
+    justify-content: space-evenly;
+}
+
+nav img {
+    width: 3.5em;
+    order: 2;
+    
+}
+
+nav ul {
+    order: 1;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.primary-button {
+    order: 3;
+    border: none;
+    border-radius: 5rem;
+    background-color: #fff;
+    color: var(--primary-nebraska-red);
+    padding: .75em 1.6em;
+    align-content: end;
+    margin-left: auto;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.1s ease;
+}
+
+.primary-button:hover {
+    border-bottom: 4px solid #920000;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 1.3em 3.5em;
+    }
+
+    nav img {
+        order: 1;
+        margin: 0 4em 0 0;
+    }
+
+    nav ul {
+        order: 2;
+    }
+}
