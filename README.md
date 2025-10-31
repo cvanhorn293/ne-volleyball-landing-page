@@ -12,8 +12,9 @@ This will show the different changes done for the application. This will include
 
 ### Assignment specific changes (Add Media Query to Landing Page: Due 11.1)
 
-- Added media query for "navbar"
-  - display:none links on mobile
+- Added media query for "Navbar" @ src/assets/components/navbar/navbar.css
+  - reordered content using flex for desktop
+  - expanded margins for nav img
 
 ## Oct 28, 2025
 
