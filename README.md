@@ -2,6 +2,13 @@
 
 This will show the different changes done for the application. This will include assignment specific changes, what the assignment was, and when it was due. It will also have non-specific assignment updates that were done to make the landing page.
 
+## Nov 1, 2025
+
+- Added remaining icons for Navbar
+- Finished mobile navigation menu
+- Adjusted padding and added max-width for desktop menu
+- Updated responsiveness of all elements of desktop/tablet
+
 ## Oct 31, 2025
 
 - Lots of Navbar updates

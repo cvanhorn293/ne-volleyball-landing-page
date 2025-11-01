@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faVolleyball, faChartSimple, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css'
 import neLogo from '../../assets/images/ne-logo.svg'
 
@@ -23,54 +23,58 @@ export default function Navbar() {
     
     useEffect(() => {
         if (isOpen) {
-        document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
         } else {
-        document.body.style.overflow = "";
+            document.body.style.overflow = "";
         }
     }, [isOpen]);
 
     return (
         <>
-            <nav className="navbar">
+            <nav>
 
-                <button className="hamburger" onClick={() => setIsOpen(true)}>
-                    &#9776;
-                </button>
-                
-                <img className="logo" src={neLogo} alt="University of Nebraska - Official Logo"/>
+                <div className="navbar" aria-label="Navigation">
 
-                <ul className="nav-links">
-                    <li><FontAwesomeIcon icon={faHouse} size="lg" /><a href="#">Home</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Statistics</a></li>
-                    <li><a href="#">Shop</a></li>
-                </ul>
-
-                <button className="primary-button button-desktop-only">Buy Tickets</button>
-
-                {isOpen && <div className="overlay" />}
-
-                <div ref={menuRef} className={`side-menu ${isOpen ? "open" : ""}`}>
-                    <button className="close-btn" onClick={() => setIsOpen(false)}>
-                        &times;
+                    <button className="hamburger" onClick={() => setIsOpen(true)}>
+                        &#9776;
                     </button>
+                    
+                    <img className="logo" src={neLogo} alt="University of Nebraska - Official Logo"/>
 
-                    <img className="side-menu-logo" src={neLogo} alt="University of Nebraska - Official Logo"/>
-
-                    <ul className="side-menu-links">
-                        <li><FontAwesomeIcon icon={faHouse} size="lg" /><a href="#" onClick={() => setIsOpen(false)}>Home</a></li>
-                        <li><a href="#" onClick={() => setIsOpen(false)}>Games</a></li>
-                        <li><a href="#" onClick={() => setIsOpen(false)}>Statistics</a></li>
-                        <li><a href="#" onClick={() => setIsOpen(false)}>Shop</a></li>
+                    <ul className="nav-links">
+                        <li><FontAwesomeIcon icon={faHouse} size="lg" /><a href="#">Home</a></li>
+                        <li><FontAwesomeIcon icon={faVolleyball} size="lg" /><a href="#">Games</a></li>
+                        <li><FontAwesomeIcon icon={faChartSimple} size="lg" /><a href="#">Statistics</a></li>
+                        <li><FontAwesomeIcon icon={faCartShopping} size="lg" /><a href="#">Shop</a></li>
                     </ul>
 
-                    <div className="side-menu-cta text-center">
-                        <h3>Get your tickets now!</h3>
-                        <button className="primary-button">Buy Tickets</button>
+                    <button className="primary-button button-desktop-only">Buy Tickets</button>
+
+                    {isOpen && <div className="overlay" />}
+
+                    <div ref={menuRef} className={`side-menu ${isOpen ? "open" : ""}`}>
+                        <button className="close-btn" onClick={() => setIsOpen(false)}>
+                            &times;
+                        </button>
+
+                        <img className="side-menu-logo" src={neLogo} alt="University of Nebraska - Official Logo"/>
+
+                        <ul className="side-menu-links margin-bottom-large">
+                            <li>
+                                <FontAwesomeIcon icon={faHouse} size="lg" />
+                                <a href="#" onClick={() => setIsOpen(false)}>Home</a>
+                            </li>
+                            <li><FontAwesomeIcon icon={faVolleyball} size="lg" /><a href="#" onClick={() => setIsOpen(false)}>Games</a></li>
+                            <li><FontAwesomeIcon icon={faChartSimple} size="lg" /><a href="#" onClick={() => setIsOpen(false)}>Statistics</a></li>
+                            <li><FontAwesomeIcon icon={faCartShopping} size="lg" /><a href="https://shop.huskers.com/" onClick={() => setIsOpen(false)} target="_blank">Shop</a></li>
+                        </ul>
+
+                        <div className="side-menu-cta text-center">
+                            <h3 className="margin-bottom-small">Get your tickets now!</h3>
+                            <button className="primary-button">Buy Tickets</button>
+                        </div>
                     </div>
                 </div>
-
-
             </nav>
         </>
     ) 

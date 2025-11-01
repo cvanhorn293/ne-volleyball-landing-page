@@ -1,13 +1,16 @@
 /* Nav styling */
 
+nav {
+    background-color: var(--primary-nebraska-red);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .navbar {
     position: relative;
     display: flex;
     align-items: center;
     gap: 3em;
     padding: 1.3em 2em;
-    background-color: var(--primary-nebraska-red);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -39,6 +42,10 @@
 .nav-links li {
     display: inline-block;
     margin-left: 20px;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+    padding: 1em 0;
+    transition: all 0.3s ease-out;
 }
 
 .nav-links a {
@@ -49,8 +56,9 @@
     text-decoration: none;
 }
 
-.nav-links a:hover {
-    transform: translateY(-2px);
+.nav-links li:has(a:hover) {
+    border-bottom: 2px solid #fff;
+    transform: translateY(-3px);
 }
 
 /* Side Menu */
@@ -59,7 +67,7 @@
     top: 0;
     left: -50%;
     width: 50%;
-    height: 100%;
+    height: 100vh;
     background: var(--primary-nebraska-red);
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease;
@@ -95,6 +103,14 @@
     margin: 4em auto 2.5em;
 }
 
+.side-menu-cta {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 1.5em;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
 .close-btn {
     position: absolute;
     right: 0.6em;
@@ -115,13 +131,18 @@
     z-index: 5;
 }
 
-
-
 @media screen and (min-width: 768px) {
 
     /* Nav desktop styling */
     nav {
-        padding: 1.3em 3.5em;
+        width: 100%;
+    }
+
+    .navbar {
+        margin: 0 auto;
+        max-width: 1400px;
+        width: 100%;
+        padding: 1.3em 5em;
     }
 
     .hamburger {
@@ -142,4 +163,21 @@
         display: none;
     }
 
+}
+
+@media screen and (min-width: 768px) and (max-width: 896px) {
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1132px) {
+    /* Tablet padding adjustment */
+    .navbar {
+        padding: 1.3em 2em;
+    }
 }
