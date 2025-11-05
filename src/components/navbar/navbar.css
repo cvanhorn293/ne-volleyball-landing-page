@@ -65,8 +65,8 @@ nav {
 .side-menu {
     position: fixed;
     top: 0;
-    left: -50%;
-    width: 50%;
+    left: -75%;
+    width: 75%;
     height: 100vh;
     background: var(--primary-nebraska-red);
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);

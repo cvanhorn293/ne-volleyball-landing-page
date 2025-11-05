@@ -13,7 +13,7 @@ const Carousel = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 1
     }; 
     
     return (
@@ -22,6 +22,10 @@ const Carousel = () => {
                 { carouselData.map( item => (
                     <div key={item.id} className="slide">
                         <img src={item.src} alt={item.alt} className="slide-image"/>
+                        <hgroup>
+                            <h1>{item.title}</h1>
+                            <h2>{item.description}</h2>
+                        </hgroup>
                     </div>
                 ))}
             </Slider>

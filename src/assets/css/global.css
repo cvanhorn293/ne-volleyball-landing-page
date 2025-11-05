@@ -13,6 +13,12 @@
     -moz-osx-font-smoothing: grayscale;
 
     /* Global Variables */
+    --black-10: rgba(0, 0, 0, .10);
+    --black-20: rgba(0, 0, 0, .20);
+    --black-30: rgba(0, 0, 0, .30);
+    --black-40: rgba(0, 0, 0, .40);
+    --black-50: rgba(0, 0, 0, .50);
+    --black-60: rgba(0, 0, 0, .60);
     --primary-nebraska-red: #d10000;
     --primary-nebraska-red-dark: #b00000;
     --primary-nebraska-red-active: #8c0000;
