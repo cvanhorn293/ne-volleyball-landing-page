@@ -53,6 +53,13 @@
     visibility: hidden;
 }
 
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: turquoise;
+    min-height: 790px;
+}
+
 /* General styling */
 
 .text-center {
@@ -89,5 +96,9 @@
 @media screen and (min-width: 768px) {
     .button-desktop-only {
         visibility: visible;
+    }
+
+    .container {
+        max-width: 80%;
     }
 }
