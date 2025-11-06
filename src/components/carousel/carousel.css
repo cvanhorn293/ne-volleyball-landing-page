@@ -35,24 +35,65 @@
 
 /* Slide Text Styling */
 .slide hgroup {
-    position: absolute;
-    width: 100%;
-    color: white;
-    background: linear-gradient(0deg, #000000e3, transparent);
+    position: relative;
+    width: 80%;
+    color: #333;
+    background: white;
+    border-top: 2px solid var(--primary-nebraska-red);
     z-index: 2;
-    bottom: 0;
+    top: -15em;
     left: 0;
-    padding: 4em 5em;
+    padding: 2em 1em;
+    margin: 0 auto;
+    text-align: center;
 }
+
 .slide h1 {
-    font-size: 4em;
+    font-size: 2.5em;
     line-height: 1em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
 }
 
 .slide h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.2em;
+    color: #404040;
+    font-weight: 600;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--black-30);
+}
+
+/* Button styling */
+.slick-dots {
+    bottom: 5% !important;
+}
+
+.slick-dots li {
+    display: block !important;
+    margin: 5px 5% !important;
+}
+
+.slick-dots li,
+.slick-dots li button {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 20px;
+}
+
+.slick-dots li button {
+    background-color: #faeeee !important;
+    opacity: 0.25 !important;
+}
+
+.slick-dots li.slick-active button {
+    background-color: var(--primary-nebraska-red) !important;
+    opacity: 1 !important;
+}
+
+.slick-dots li button:before {
+    opacity: 0 !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -70,9 +111,49 @@
         object-fit: cover;
     }
 
-    .slick-prev:before,
+    .slick-prev:before, 
     .slick-next:before {
         font-size: 50px !important;
         opacity: 1 !important;
+    }
+
+    .slick-dots li {
+        display: inline-block !important;
+        margin: 0 5px !important;
+    }
+
+    .slick-dots li, 
+    .slick-dots li button {
+        width: 80px !important;
+        height: 10px !important;
+        border-radius: 20px;
+    }
+
+    .slide hgroup {
+        position: absolute;
+        width: 100%;
+        color: white;
+        background: linear-gradient(0deg, #000000e3 30%, transparent);
+        border-top: none;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 7em 5em;
+        text-align: left;
+    }
+
+    .slide h1 {
+        font-size: 4em;
+        line-height: 1em;
+        margin-bottom: 0.25em;
+    }
+
+    .slide h2 {
+        font-size: 2em;
+        line-height: 1.2em;
+        color: #fff;
+        border-top: none;
+        margin: 0;
     }
 }
