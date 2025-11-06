@@ -136,7 +136,7 @@
         background: linear-gradient(0deg, #000000e3 30%, transparent);
         border-top: none;
         z-index: 2;
-        top: 0;
+        top: auto;
         bottom: 0;
         left: 0;
         padding: 7em 5em;
