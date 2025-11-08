@@ -3,11 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './assets/css/global.css'
 import Navbar from './components/navbar/navbar.jsx'
 import Carousel from './components/carousel/carousel.jsx'
+import Schedule from './components/schedule/schedule.jsx'
 // import Slides from './data/slides.json'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar />
     <Carousel/>
+    <Schedule/>
   </StrictMode>
 )

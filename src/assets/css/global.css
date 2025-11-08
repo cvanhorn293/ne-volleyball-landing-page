@@ -5,7 +5,7 @@
 
     color-scheme: light dark;
     color: #fff;
-    background-color: #242424;
+    background-color: #fff;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -83,7 +83,7 @@
     margin-bottom: 2.5em;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
         background-color: #ffffff;
@@ -96,7 +96,7 @@
     .primary-button {
         color: var(--primary-nebraska-red);
     }
-}
+} */
 
 @media screen and (min-width: 768px) {
     .button-desktop-only {

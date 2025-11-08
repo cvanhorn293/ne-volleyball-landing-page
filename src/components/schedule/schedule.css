@@ -1,0 +1,50 @@
+.schedule-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.schedule-container .slick-slide {
+    padding: 1em;
+}
+
+.schedule-container .slick-slider {
+    overflow: hidden;
+}
+
+.schedule-container .slick-list {
+    overflow: visible !important;
+}
+
+.schedule-item {
+    text-align: center;
+    background-color: #fdfcfc;
+    border:1px solid #eee;
+    border-radius: 8px;
+    box-shadow: rgb(74 74 74 / 10%) 4px 5px 8px;
+    color: var(--black-60);
+    padding: 28px 12px;
+}
+
+.schedule-image {
+    height: 60px;
+    width: auto;
+    margin-bottom: 12px;
+    margin: 0 auto;
+    display: block;
+}
+
+.date {
+    font-weight: 700;
+    margin-bottom: 48px;
+    color: var(--black-80);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .schedule-container {
+        max-width: 1400px;
+        width: 100%;
+    }
+}
