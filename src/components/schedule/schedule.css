@@ -16,6 +16,31 @@
     overflow: visible !important;
 }
 
+.schedule-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    padding: 0 16px;
+}
+
+.sliderButtons {
+    display: none;
+    justify-content: right;
+    align-items: right;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+button.slider-button {
+    background-color: var(--primary-nebraska-red);
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 20px;
+}
+
 .schedule-item {
     text-align: center;
     background-color: #fdfcfc;
@@ -42,9 +67,93 @@
     text-transform: uppercase;
 }
 
+.schedule-header-text {
+    color: #242424;
+}
+
+.schedule-item h2 {
+    font-size: 1.4em;
+    margin-top: 20px;
+    color: #242424;
+}
+
+.schedule-item h3 {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: var(--black-70);
+    font-weight: 400;
+}
+
+.score-time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    font-size: 1.3em;
+}
+
+.score-time-container span {
+    color: var(--primary-nebraska-red);
+    font-weight: 600;
+}
+
+.playTime {
+    color: var(--primary-nebraska-red);
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.finalScore {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.watch-logo {
+    height: 20px;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 4px;
+    vertical-align: middle;
+}
+
+.watch-link {
+    text-align: center;
+    color: var(--primary-nebraska-red);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 .5em;
+}
+
 @media screen and (min-width: 768px) {
     .schedule-container {
         max-width: 1400px;
         width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 30px !important;
+        opacity: 1 !important;
+        
+    }
+
+    .slick-prev {
+        
+        left: 10px !important;
+        z-index: 1;
+    }
+
+    .slick-next {
+        right: 40px !important;
+        z-index: 1;
+    }
+
+    .schedule-header {
+        justify-content: space-between;
+    }
+
+    .sliderButtons {
+        display: flex;
     }
 }

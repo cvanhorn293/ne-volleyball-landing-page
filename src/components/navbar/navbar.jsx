@@ -43,7 +43,7 @@ export default function Navbar() {
 
                     <ul className="nav-links">
                         <li><FontAwesomeIcon icon={faHouse} size="lg" /><a href="#">Home</a></li>
-                        <li><FontAwesomeIcon icon={faVolleyball} size="lg" /><a href="#">Games</a></li>
+                        <li><FontAwesomeIcon icon={faVolleyball} size="lg" /><a href="#schedule">Games</a></li>
                         <li><FontAwesomeIcon icon={faChartSimple} size="lg" /><a href="#">Statistics</a></li>
                         <li><FontAwesomeIcon icon={faCartShopping} size="lg" /><a href="#">Shop</a></li>
                     </ul>

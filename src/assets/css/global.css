@@ -19,6 +19,7 @@
     --black-40: rgba(0, 0, 0, .40);
     --black-50: rgba(0, 0, 0, .50);
     --black-60: rgba(0, 0, 0, .60);
+    --text-dark: #242424;
     --primary-nebraska-red: #d10000;
     --primary-nebraska-red-dark: #b00000;
     --primary-nebraska-red-active: #8c0000;
@@ -81,6 +82,10 @@
 
 .margin-bottom-large {
     margin-bottom: 2.5em;
+}
+
+h2 {
+    color: var(--text-dark);
 }
 
 /* @media (prefers-color-scheme: light) {

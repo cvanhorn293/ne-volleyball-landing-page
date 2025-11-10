@@ -1,3 +1,9 @@
+var bigPlusLogo = "https://huskers.com/imgproxy/dqDf7KySHz-PygmhYm6JjRvzXJR0nA9-L-tFtnB5yPg/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2h1c2tlcnMtY29tLXByb2QvMjAyMy8wOC8wMS9YOGFieFJhdUprY2RyeXpLVjZFTUJJWmpRNE15djZ3S3NvMjlxRzlPLmpwZw.jpg";
+var fs1Logo = "https://huskers.com/imgproxy/abOCZPjFk7retFiHI95TY3B_5ZW8xUStFfv9g8xtN5g/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2h1c2tlcnMtY29tLXByb2QvMjAyMy8xMC8zMC9TVjZNRmIwUGtaM3BRRmZ5M1BQN0RVeGNDVDROQTdYN2JFNFNNZmI5LmpwZw.jpg";
+var bigNetworkLogo = "https://huskers.com/imgproxy/MDzkCaaDsbR-fAZyprDYtyUOfLPaDjTNc7LofkEBGn0/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2h1c2tlcnMtY29tLXByb2QvMjAyMy8xMC8wMy9JS3JPSFBwbHhPWU5PUHVmdVBvQ1lDTzNnZlp2WFF1YXpFV05qeFhYLmpwZw.jpg";
+var peacockLogo = "https://huskers.com/imgproxy/uF_LnR09pS-ZsANOQk63vj6EOLxk5zY0ohm-HbR28eY/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2h1c2tlcnMtY29tLXByb2QvMjAyMy8xMC8zMC9aZHB4bkJoazV3RUlEcU1xWGtkdkptbUFkZVhYQk1wckc4SnhUcjN2LnBuZw.png";
+var npmLogo = "https://huskers.com/imgproxy/_5D0pgSdzaCc_eoG0ZquTCN4ZBCsfqZEJb1KlhaBb4A/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2h1c2tlcnMtY29tLXByb2QvMjAyNC8wOC8xOS81MTVLT25xcW94aHBvSTRZWVA5emdTaU83ZFk3b0FIUThtdFl2RnZlLnBuZw.png";
+
 const schedule = [
     {
         "id": 1,
@@ -6,8 +12,10 @@ const schedule = [
         "alt": "Purdue University",
         "opponent": "Purdue",
         "location": "at Purdue",
-        "score": "3-0",
-        "time": null
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": bigPlusLogo
     },
     {
         "id": 2,
@@ -16,8 +24,10 @@ const schedule = [
         "alt": "Michigan State University",
         "opponent": "Michigan State",
         "location": "at Michigan State",
-        "score": "3-0",
-        "time": null
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": bigPlusLogo
     },
     {
         "id": 3,
@@ -26,8 +36,10 @@ const schedule = [
         "alt": "Michigan University",
         "opponent": "Michigan",
         "location": "at Michigan",
-        "score": "3-0",
-        "time": null
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": bigPlusLogo
     },
         {
         "id": 4,
@@ -36,8 +48,10 @@ const schedule = [
         "alt": "Northwestern University",
         "opponent": "Northwestern",
         "location": "Home",
-        "score": "3-0",
-        "time": null
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": npmLogo
     },
     {
         "id": 5,
@@ -46,8 +60,10 @@ const schedule = [
         "alt": "Michigan State University",
         "opponent": "Michigan State",
         "location": "Home",
-        "score": "3-0",
-        "time": null
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": bigNetworkLogo
     },
     {
         "id": 6,
@@ -56,8 +72,10 @@ const schedule = [
         "alt": "Wisconsin University",
         "opponent": "Wisconsin",
         "location": "at Wisconsin",
-        "score": "3-0",
-        "time": null
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": bigNetworkLogo
     },
     {
         "id": 7,
@@ -66,8 +84,10 @@ const schedule = [
         "alt": "Oregon University",
         "opponent": "Oregon",
         "location": "Home",
-        "score":"3-0",
-        "time": null
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": bigNetworkLogo
     },
     {
         "id": 8,
@@ -76,8 +96,10 @@ const schedule = [
         "alt": "Illinois University",
         "opponent": "Illinois",
         "location": "Home",
-        "score": "3-0",
-        "time": null
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": fs1Logo
     },
     {
         "id": 9,
@@ -86,8 +108,10 @@ const schedule = [
         "alt": "Minnesota University",
         "opponent": "Minnesota",
         "location": "at Minnesota",
-        "score": null,
-        "time": "2:30 PM CST"
+        "homeScore": 3,
+        "opponentScore": 0,
+        "time": null,
+        "watchLogo": peacockLogo
     },
     {
         "id": 10,
@@ -96,8 +120,10 @@ const schedule = [
         "alt": "UCLA",
         "opponent": "UCLA",
         "location": "at UCLA",
-        "score": null,
-        "time": "8:00pm CST"
+        "homeScore": null,
+        "opponentScore": null,
+        "time": "8:00pm CST",
+        "watchLogo": bigNetworkLogo
     },
     {
         "id": 11,
@@ -106,8 +132,10 @@ const schedule = [
         "alt": "USC",
         "opponent": "USC",
         "location": "at USC",
-        "score": null,
-        "time": "2:00pm CST"
+        "homeScore": null,
+        "opponentScore": null,
+        "time": "2:00pm CST",
+        "watchLogo": bigPlusLogo
     },
     {
         "id": 12,
@@ -116,8 +144,10 @@ const schedule = [
         "alt": "Iowa University",
         "opponent": "Iowa",
         "location": "Home",
-        "score": null,
-        "time": "7:00pm CST"
+        "homeScore": null,
+        "opponentScore": null,
+        "time": "7:00pm CST",
+        "watchLogo": fs1Logo
     },
     {
         "id": 13,
@@ -126,8 +156,10 @@ const schedule = [
         "alt": "Indiana University",
         "opponent": "Indiana",
         "location": "at Indiana",
-        "score": null,
-        "time": "5:00pm CST"
+        "homeScore": null,
+        "opponentScore": null,
+        "time": "5:00pm CST",
+        "watchLogo": bigPlusLogo
     },
     {
         "id": 14,
@@ -136,8 +168,10 @@ const schedule = [
         "alt": "Penn State University",
         "opponent": "Penn State",
         "location": "Home",
-        "score": null,
-        "time": "5:30pm CST"
+        "homeScore": null,
+        "opponentScore": null,
+        "time": "5:30pm CST",
+        "watchLogo": bigNetworkLogo
     },
     {
         "id": 15,
@@ -146,8 +180,10 @@ const schedule = [
         "alt": "Ohio State University",
         "opponent": "Ohio State",
         "location": "Home",
-        "score": null,
-        "time": "TBA"
+        "homeScore": null,
+        "opponentScore": null,
+        "time": "TBA",
+        "watchLogo": bigNetworkLogo
     }
 ]
 
