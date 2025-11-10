@@ -2,6 +2,21 @@
 
 This will show the different changes done for the application. This will include assignment specific changes, what the assignment was, and when it was due. It will also have non-specific assignment updates that were done to make the landing page.
 
+## Nov 9/10, 2025
+
+- Updated schedule component to start the initial slide at the index of a time that's not null
+- Finished styling base schedule component
+- Added new next/previous buttons for schedule component
+- Updated readme
+- Updated carousel to be wider
+  - I didn't like to look of it anymore, so updated it
+- Updated scheduleData to include:
+  - opponentScore
+  - homeScore
+  - vars for all watch logos
+  - updated times/scores
+- Added some more global colors / styles
+
 ## Nov 8, 2025
 
 - Updated carousel to remove arrows
