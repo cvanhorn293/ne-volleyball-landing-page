@@ -41,6 +41,11 @@ button.slider-button {
     border-radius: 20px;
 }
 
+button.slider-button:hover {
+    background-color: var(--primary-nebraska-red-active);
+    cursor: pointer;
+}
+
 .schedule-item {
     text-align: center;
     background-color: #fdfcfc;
@@ -102,6 +107,7 @@ button.slider-button {
     color: var(--primary-nebraska-red);
     font-weight: 600;
     font-size: 0.8em;
+    padding-top: 6px;
 }
 
 .finalScore {
@@ -125,6 +131,10 @@ button.slider-button {
     padding: 0 .5em;
 }
 
+.watch-link:hover {
+    color: var(--primary-nebraska-red-active)
+}
+
 @media screen and (min-width: 768px) {
     .schedule-container {
         max-width: 1400px;
@@ -139,7 +149,6 @@ button.slider-button {
     }
 
     .slick-prev {
-        
         left: 10px !important;
         z-index: 1;
     }

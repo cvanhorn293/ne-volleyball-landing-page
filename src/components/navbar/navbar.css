@@ -3,6 +3,9 @@
 nav {
     background-color: var(--primary-nebraska-red);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 }
 
 .navbar {
@@ -140,7 +143,6 @@ nav {
 
     .navbar {
         margin: 0 auto;
-        max-width: 1400px;
         width: 100%;
         padding: 1.3em 5em;
     }

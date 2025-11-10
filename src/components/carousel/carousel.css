@@ -3,6 +3,7 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
+    padding-top: 5em;
 }
 
 .slide {
@@ -67,6 +68,7 @@
 
 /* Button styling */
 .slick-dots {
+    display: none !important;
     bottom: 5% !important;
 }
 
@@ -100,7 +102,7 @@
     .slider-container {
         width: 95%;
         margin: 0 auto;
-        padding: 2em 0;
+        padding: 9em 0 2em 0;
     }
     
     .slide {
@@ -109,6 +111,10 @@
 
     .slide-image {
         object-fit: cover;
+    }
+
+    .slick-dots {
+        display: block !important;
     }
 
     .slick-dots li {

@@ -8,13 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "./schedule.css";
 
 function getScore(homeScore, opponentScore) {
-
     if (homeScore == null || opponentScore == null) {
         return null;
     } else {
         return homeScore + " - " + opponentScore;
     }
-
 }
 
 const Schedule = () => { 
@@ -116,7 +114,7 @@ const Schedule = () => {
                         <FontAwesomeIcon icon={faArrowRight} />
                     </button>
                 </div>
-            </div>        
+            </div>
             <Slider ref={sliderRef} {...settings} {...sliderSettings}>
                 { scheduleData.map( schedule => {
                     const finalScore = getScore(schedule.homeScore, schedule.opponentScore);

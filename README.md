@@ -2,6 +2,15 @@
 
 This will show the different changes done for the application. This will include assignment specific changes, what the assignment was, and when it was due. It will also have non-specific assignment updates that were done to make the landing page.
 
+## Nov 10, 2025
+
+- Added sponsors + footer components
+- Updated nav to be fixed on both desktop/mobile
+- Added more global colors
+- Updated HTML to be semantic
+- Updated components to be semantic
+- Split nav into own header.jsx for semantic HTML
+
 ## Nov 9/10, 2025
 
 - Updated schedule component to start the initial slide at the index of a time that's not null
@@ -16,6 +25,7 @@ This will show the different changes done for the application. This will include
   - vars for all watch logos
   - updated times/scores
 - Added some more global colors / styles
+- Updated favicon to Nebraska logo
 
 ## Nov 8, 2025
 
