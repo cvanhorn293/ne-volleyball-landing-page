@@ -1,5 +1,5 @@
-.stats-container {
-    /* background-color: #fdf8f8; */
+#stats-container {
+    background-color: #fdf8f8;
 }
 
 .stats-container p, .stats-container td {
@@ -17,9 +17,17 @@
     padding: 4em 2em;
 }
 
+.stats-container table thead td {
+    font-weight: 700;
+    color: var(--text-dark);
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    font-size: 0.9em;
+}
+
 tr.stats-row td, .stats-container thead tr td{
-    padding: 8px;
-    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 tr.stats-row:nth-child(even) {
@@ -30,9 +38,43 @@ tr.stats-row:nth-child(odd) {
     background-color: #f3f3f3;
 }
 
+.stats-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.toggle-container {
+    padding: 0.35em;
+    background-color: #f3f3f3;
+    border-radius: 50px;
+}
+
+.toggle-container button.toggle-button {
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: 0;
+    color: var(--text-dark);
+    font-weight: 600;
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.toggle-container button:not(.active):hover {
+    color: var(--primary-nebraska-red)
+}
+
+.toggle-container button.active {
+    color: #fff;
+    background-color: var(--primary-nebraska-red);
+}
+
 @media screen and (min-width: 768px) {
     .stats-desktop-container table {
         min-width: 100%;
+        border: 1px solid #e0e0e0;
     }
 
     .stats-desktop-container {
@@ -41,5 +83,12 @@ tr.stats-row:nth-child(odd) {
 
     .stats-mobile-container {
         display: none;
+    }
+
+    .stats-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
     }
 }

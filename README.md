@@ -7,10 +7,13 @@ This will show the different changes done for the application. This will include
 - Added new stats section
   - Has both a mobile and a desktop version
   - Desktop mostly finished, still need to do more styling / content on mobile
-  - TODO: Add a defensive toggle to swap all of the content (time allowing)
 - Hooked statistics API from NE site
 - Styled stats section
 - Removed border-spacing from tables in global.css
+- Updated all stats
+- Added hide in global.css to display:none
+- Added new toggle with functionality to toggle based on the mode "offense" or "defense"
+- Started mobile design for stats
 
 ## Nov 10, 2025
 

@@ -43,6 +43,10 @@ table {
     border-spacing: 0;
 }
 
+.hide {
+    display: none;
+}
+
 .primary-button {
     border: 0;
     border-radius: 4px;
