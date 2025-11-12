@@ -2,6 +2,16 @@
 
 This will show the different changes done for the application. This will include assignment specific changes, what the assignment was, and when it was due. It will also have non-specific assignment updates that were done to make the landing page.
 
+## Nov 11, 2025
+
+- Added new stats section
+  - Has both a mobile and a desktop version
+  - Desktop mostly finished, still need to do more styling / content on mobile
+  - TODO: Add a defensive toggle to swap all of the content (time allowing)
+- Hooked statistics API from NE site
+- Styled stats section
+- Removed border-spacing from tables in global.css
+
 ## Nov 10, 2025
 
 - Added sponsors + footer components

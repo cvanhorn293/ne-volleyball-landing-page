@@ -1,0 +1,45 @@
+.stats-container {
+    /* background-color: #fdf8f8; */
+}
+
+.stats-container p, .stats-container td {
+    color: var(--text-dark);
+    text-align:center;
+}
+
+.stats-desktop-container {
+    display: none;
+    padding: 3em 6em;
+}
+
+.stats-mobile-container {
+    display: block;
+    padding: 4em 2em;
+}
+
+tr.stats-row td, .stats-container thead tr td{
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+tr.stats-row:nth-child(even) {
+    background-color: #fff;
+}
+
+tr.stats-row:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+@media screen and (min-width: 768px) {
+    .stats-desktop-container table {
+        min-width: 100%;
+    }
+
+    .stats-desktop-container {
+        display: block;
+    }
+
+    .stats-mobile-container {
+        display: none;
+    }
+}
