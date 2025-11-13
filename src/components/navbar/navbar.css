@@ -88,6 +88,12 @@ nav {
     align-items: center;
 }
 
+.side-menu-links li:hover, .side-menu-links li:hover > a {
+    background-color: #fff;
+    color: var(--primary-nebraska-red);
+}
+
+
 .side-menu-links a {
     color: #fff;
     margin-left: 1.3em;
@@ -134,6 +140,10 @@ nav {
     z-index: 5;
 }
 
+.buy-tickets-button {
+    margin-left: auto;
+}
+
 @media screen and (min-width: 768px) {
 
     /* Nav desktop styling */
@@ -147,10 +157,6 @@ nav {
         padding: 1.3em 5em;
     }
 
-    .hamburger {
-        display: none;
-    }
-
     .nav-links {
         display: flex;
         gap: 1.2em;
@@ -161,8 +167,17 @@ nav {
         transform: none;
     }
 
-    .side-menu, .overlay {
-        display: none;
+    .side-menu {
+        left: -15%;
+        width: 15%;
+    }
+
+    .side-menu-links a {
+        color: #fff;
+        margin-left: 1.3em;
+        font-size: 1.2em;
+        font-weight: 500;
+        text-decoration: none;
     }
 
 }

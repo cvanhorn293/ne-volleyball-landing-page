@@ -11,6 +11,10 @@
     text-align:center;
 }
 
+.stats-container {
+    scroll-margin-top: 120px;
+}
+
 .stats-desktop-container {
     display: none;
     padding: 3em 6em;

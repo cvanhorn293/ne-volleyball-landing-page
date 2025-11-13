@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useFetchStats } from './hooks/useFetchStats';
+import { useFetchStats } from '../../hooks/useFetchStats';
 import { StatBlock, StatCard } from "./statCard";
 import Slider from "react-slick";
 import './statistics.css'
@@ -99,7 +99,7 @@ function Stats() {
     return (
         <>
             {/* Desktop View */}
-            <section className="stats-container stats-desktop-container">
+            <section id="stats-desktop" className="stats-container stats-desktop-container">
                 <div className="stats-header">
                     <h2>Player Highlight Stats</h2>
                     <div className="toggle-container">
@@ -184,7 +184,7 @@ function Stats() {
             </section>
 
             {/* Mobile View */}
-            <section id="stats" className="stats-container stats-mobile-container">
+            <section id="stats-mobile" className="stats-container stats-mobile-container">
                 <div className="stats-header">
                     <h2>Player Highlight Stats</h2>
                     <div className="toggle-container">
