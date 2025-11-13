@@ -25,6 +25,11 @@
     padding: 4em 2em;
 }
 
+.stats-container table { 
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
 .stats-container table thead td {
     font-weight: 700;
     color: var(--text-dark);
@@ -153,10 +158,18 @@ tr.stats-row:nth-child(odd) {
         margin-top: 0;
     }
 
+    
+}
+
+@media screen  and (min-width: 535px) {
     .stats-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 1em;
+    }
+
+    .toggle-container {
+        margin-top: 0;
     }
 }

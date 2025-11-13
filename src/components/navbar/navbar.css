@@ -166,7 +166,7 @@ nav {
         position: static;
         transform: none;
     }
-
+    
     .side-menu {
         left: -15%;
         width: 15%;
@@ -190,11 +190,21 @@ nav {
     .nav-links a {
         margin-left: 0;
     }
+
+    .side-menu {
+        left: -50%;
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1132px) {
     /* Tablet padding adjustment */
     .navbar {
         padding: 1.3em 2em;
+    }
+    
+    .side-menu {
+        left: -50%;
+        width: 50%;
     }
 }
