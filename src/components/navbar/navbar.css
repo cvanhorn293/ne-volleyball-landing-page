@@ -23,6 +23,7 @@ nav {
     width: 3.5em;
     height: auto;
     font-weight: bold;
+    background-color: var(--primary-nebraska-red);
 }
 
 .hamburger {
