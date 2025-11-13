@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { useFetchStats } from './hooks/useFetchStats';
+import { StatBlock, StatCard } from "./statCard";
 import Slider from "react-slick";
 import './statistics.css'
 import "slick-carousel/slick/slick.css";
@@ -20,21 +21,10 @@ function Stats() {
         return player?.statistic?.data?.career?.columns?.[0]?.statistic || {};
     };
     
-    const getSeasonStats = (player) => {
-        return player?.statistic?.data?.season?.columns?.[0]?.statistic || {};
-    };
-    
     const getCareerInfo = (player) => {
         return {
             gamesPlayed: player?.statistic?.data?.career?.gamesPlayed || 0,
             gamesStarted: player?.statistic?.data?.career?.gamesStarted || 0,
-        };
-    };
-    
-    const getSeasonInfo = (player) => {
-        return {
-            gamesPlayed: player?.statistic?.data?.season?.gamesPlayed || 0,
-            gamesStarted: player?.statistic?.data?.season?.gamesStarted || 0,
         };
     };
 
@@ -52,8 +42,12 @@ function Stats() {
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
+        centerPadding: "0",
         arrows: false,
     };
+
+    var defense = mode == "defense";
+    var offense = mode == "offense";
 
     if (loading) return <section className="stats-container"><p>Loading...</p></section>;
     if (error) return <section className="stats-container"><p>Error: {error}</p></section>;
@@ -62,7 +56,7 @@ function Stats() {
 
     // Map table cell values depending on mode
     const getStatValues = (careerStats, careerInfo, mode) => {
-        if (mode === 'defense') {
+        if (defense) {
             return {
                 gamesPlayed: careerInfo.gamesPlayed,
                 teamMatches: null || 0,
@@ -110,16 +104,16 @@ function Stats() {
                     <h2>Player Highlight Stats</h2>
                     <div className="toggle-container">
                         <button
-                            className={mode === 'offense' ? 'toggle-button active' : 'toggle-button'}
+                            className={offense ? 'toggle-button active' : 'toggle-button'}
                             onClick={() => setMode('offense')}
-                            aria-pressed={mode === 'offense'}
+                            aria-pressed={offense}
                         >
                             Offensive
                         </button>
                         <button
-                            className={mode === 'defense' ? 'toggle-button active' : 'toggle-button'}
+                            className={defense ? 'toggle-button active' : 'toggle-button'}
                             onClick={() => setMode('defense')}
-                            aria-pressed={mode === 'defense'}
+                            aria-pressed={defense}
                         >
                             Defensive
                         </button>
@@ -128,29 +122,29 @@ function Stats() {
                 <table>
                     <thead>
                         <tr>
-                            <td rowSpan="1" colSpan={mode == "offense" ? "7" : "3"}>&nbsp;</td>
-                            <td rowSpan="1" colSpan={mode == "offense" ? "5" : "3"}>{mode == "offense" ? "Attack" : "Dig"}</td>
-                            <td rowSpan="1" colSpan="2">{mode == "offense" ? "Set" : "Receptions"}</td>
-                            <td rowSpan="1" colSpan={mode == "offense" ? "3" : "6"}>{mode == "offense" ? "Serve" : "Blocks"}</td>
+                            <td rowSpan="1" colSpan={offense ? "7" : "3"}>&nbsp;</td>
+                            <td rowSpan="1" colSpan={offense ? "5" : "3"}>{offense ? "Attack" : "Dig"}</td>
+                            <td rowSpan="1" colSpan="2">{offense ? "Set" : "Receptions"}</td>
+                            <td rowSpan="1" colSpan={offense ? "3" : "6"}>{offense ? "Serve" : "Blocks"}</td>
                         </tr>
                         <tr>
                             <td rowSpan="1" colSpan="1">#</td>
                             <td rowSpan="1" colSpan="1">&nbsp;</td>
                             <td rowSpan="1" colSpan="1">SP</td>
-                            <td rowSpan="1" colSpan="1" className={mode == "defense" ? "hide" : ""}>MP</td>
-                            <td rowSpan="1" colSpan="1" className={mode == "defense" ? "hide" : ""}>MS</td>
-                            <td rowSpan="1" colSpan="1" className={mode == "defense" ? "hide" : ""}>PTS</td>
-                            <td rowSpan="1" colSpan="1" className={mode == "defense" ? "hide" : ""}>PTS/S</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "K" : "DIG"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "K/S" : "DIG/S"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "E" : "RE"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "TA" : "RE/S"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "PCT" : "BS"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "A" : "BA"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "A/S" : "BLK"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "SA" : "BLK/S"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "SA/S" : "BE"}</td>
-                            <td rowSpan="1" colSpan="1">{mode == "offense" ? "SE" : "BHE"}</td>
+                            <td rowSpan="1" colSpan="1" className={defense ? "hide" : ""}>MP</td>
+                            <td rowSpan="1" colSpan="1" className={defense ? "hide" : ""}>MS</td>
+                            <td rowSpan="1" colSpan="1" className={defense ? "hide" : ""}>PTS</td>
+                            <td rowSpan="1" colSpan="1" className={defense ? "hide" : ""}>PTS/S</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "K" : "DIG"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "K/S" : "DIG/S"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "E" : "RE"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "TA" : "RE/S"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "PCT" : "BS"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "A" : "BA"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "A/S" : "BLK"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "SA" : "BLK/S"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "SA/S" : "BE"}</td>
+                            <td rowSpan="1" colSpan="1">{offense ? "SE" : "BHE"}</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -165,19 +159,19 @@ function Stats() {
                                         <td className="stats-item">{player.jersey_no}</td>
                                         <td className="stats-item">{player.first_name} {player.last_name}</td>
                                         <td className="stats-item">{stats.gamesPlayed}</td>
-                                        <td className={mode == "defense" ? "hide" : "stats-item"}>{stats.teamMatches}</td>
-                                        <td className={mode == "defense" ? "hide" : "stats-item"}>{stats.gamesStarted || 0}</td>
-                                        <td className={mode == "defense" ? "hide" : "stats-item"}>{stats.pts || 0}</td>
-                                        <td className={mode == "defense" ? "hide" : "stats-item"}>{Number(stats.ptsPerSet || 0).toFixed(2)}</td>
+                                        <td className={defense ? "hide" : "stats-item"}>{stats.teamMatches}</td>
+                                        <td className={defense ? "hide" : "stats-item"}>{stats.gamesStarted || 0}</td>
+                                        <td className={defense ? "hide" : "stats-item"}>{stats.pts || 0}</td>
+                                        <td className={defense ? "hide" : "stats-item"}>{Number(stats.ptsPerSet || 0).toFixed(2)}</td>
                                         <td className="stats-item">{stats.k_dig || 0}</td>
                                         <td className="stats-item">{Number(stats.kPerSet_digPerSet || 0).toFixed(2)}</td>
                                         <td className="stats-item">{stats.e_re || 0}</td>
                                         <td className="stats-item">{stats.ta_rePerSet || 0}</td>
                                         <td className="stats-item">{roundTo(stats.pct_bs || 0, 3)}</td>
                                         <td className="stats-item">{stats.a_ba || 0}</td>
-                                        <td className="stats-item">{mode == "offense" ? Number(stats.aPerSet_blk || 0).toFixed(2) : stats.aPerSet_blk || 0}</td>
-                                        <td className="stats-item">{mode == "offense" ? stats.sa_blkPerSet || 0 : roundTo(stats.sa_blkPerSet || 0, 3)}</td>
-                                        <td className="stats-item">{mode == "offense" ? Number(stats.saPerSet_be || 0).toFixed(2) : stats.saPerSet_be || 0}</td>
+                                        <td className="stats-item">{offense ? Number(stats.aPerSet_blk || 0).toFixed(2) : stats.aPerSet_blk || 0}</td>
+                                        <td className="stats-item">{offense ? stats.sa_blkPerSet || 0 : roundTo(stats.sa_blkPerSet || 0, 3)}</td>
+                                        <td className="stats-item">{offense ? Number(stats.saPerSet_be || 0).toFixed(2) : stats.saPerSet_be || 0}</td>
                                         <td className="stats-item">{stats.se_bhe || 0}</td>
                                     </tr>
                                 );
@@ -190,21 +184,21 @@ function Stats() {
             </section>
 
             {/* Mobile View */}
-            <section id="stats-container" className="stats-container stats-mobile-container">
+            <section id="stats" className="stats-container stats-mobile-container">
                 <div className="stats-header">
                     <h2>Player Highlight Stats</h2>
                     <div className="toggle-container">
                         <button
-                            className={mode === 'offense' ? 'toggle-button active' : 'toggle-button'}
+                            className={offense ? 'toggle-button active' : 'toggle-button'}
                             onClick={() => setMode('offense')}
-                            aria-pressed={mode === 'offense'}
+                            aria-pressed={offense}
                         >
                             Offensive
                         </button>
                         <button
-                            className={mode === 'defense' ? 'toggle-button active' : 'toggle-button'}
+                            className={defense ? 'toggle-button active' : 'toggle-button'}
                             onClick={() => setMode('defense')}
-                            aria-pressed={mode === 'defense'}
+                            aria-pressed={defense}
                         >
                             Defensive
                         </button>
@@ -217,10 +211,79 @@ function Stats() {
                                 const careerInfo = getCareerInfo(player);
                                 const stats = getStatValues(careerStats, careerInfo, mode);
                                 
+                                
                                 return (
-                                    <div key={player.id || index} className="stats-card">
+                                    <div key={player.id || index} className="stats-card-container">
+                                        <p className="card-jersey-number">#{player.jersey_no}</p>
                                         <h2>{player.first_name} {player.last_name}</h2>
+                                        <StatCard title="General Stats" hidden={defense}>
+                                            <StatBlock title="SP" value={stats.gamesPlayed} />
+                                            <StatBlock 
+                                                title="MP"
+                                                value={stats.gamesStarted || 0}
+                                            />
+                                            <StatBlock 
+                                                title="MP"
+                                                value={stats.gamesStarted || 0}
+                                            />
+                                            <StatBlock 
+                                                title="PTS"
+                                                value={stats.pts || 0}
+                                            />
+                                            <StatBlock 
+                                                title="PTS/S"
+                                                value={Number(stats.ptsPerSet || 0).toFixed(2)}
+                                            />
+                                        </StatCard>
+
+                                        <StatCard title={offense ? "Attack Stats" : "Block Stats"}>
+                                            <StatBlock 
+                                                title={offense ? "K" : "BA"}
+                                                value={offense ? stats.k_dig : stats.a_ba}
+                                            />
+                                            <StatBlock 
+                                                title={offense ? "K/S" : "BLK"}
+                                                value={offense ? Number(stats.kPerSet_digPerSet || 0).toFixed(2) : stats.aPerSet_blk}
+                                            />
+                                            <StatBlock 
+                                                title={offense ? "E" : "BLK/S"}
+                                                value={offense ? stats.e_re : roundTo(stats.sa_blkPerSet || 0, 3)}
+                                            />
+                                            <StatBlock 
+                                                title={offense ? "TA" : "BE"}
+                                                value={offense ? stats.ta_rePerSet : stats.saPerSet_be}
+                                            />
+                                            <StatBlock 
+                                                title={offense ? "PCT" : "BHE"}
+                                                value={offense ? roundTo(stats.pct_bs || 0, 3) : stats.se_bhe}
+                                            />
+                                        </StatCard>
                                         
+                                        <StatCard title={offense ? "Serve Stats" : "Dig Stats"}>
+                                            <StatBlock 
+                                                title={offense ? "SA" : "DIG"}
+                                                value={offense ? stats.sa_blkPerSet : stats.k_dig}
+                                            />
+                                            <StatBlock 
+                                                title={offense ? "SA/S" : "DIG/S"}
+                                                value={offense ? Number(stats.saPerSet_be || 0).toFixed(2) : Number(stats.kPerSet_digPerSet || 0).toFixed(2)}
+                                            />
+                                            <StatBlock 
+                                                title={offense ? "SE" : "RE"}
+                                                value={offense ? stats.se_bhe : stats.e_re}
+                                            />
+                                        </StatCard>
+
+                                        <StatCard title={offense ? "Setting Stats" : "Reception Stats"}>
+                                            <StatBlock 
+                                                title={offense ? "A" : "RE/S"}
+                                                value={offense ? stats.a_ba : stats.ta_rePerSet}
+                                            />
+                                            <StatBlock 
+                                                title={offense ? "A/S" : "BS"}
+                                                value={offense ? Number(stats.aPerSet_blk || 0).toFixed(2) : stats.pct_bs}
+                                            />
+                                        </StatCard>
                                     </div>
                                 );
                             })
@@ -228,19 +291,13 @@ function Stats() {
                             <p>No data available</p>
                         )}
                 </Slider>
-                <div className="">
-                    <div className="schedule-header">
-                        <div className="sliderButtons">
-                            <button className="slider-button" onClick={previous} aria-label="Previous Player">
-                                {/* Add FontAwesomeIcon if imported */}
-                                Previous
-                            </button>
-                            <button className="slider-button" onClick={next} aria-label="Next Player">
-                                {/* Add FontAwesomeIcon if imported */}
-                                Next
-                            </button>
-                        </div>
-                    </div>
+                <div className="stats-button-container">
+                    <button className="stats-slider-button" onClick={previous} aria-label="Previous Player">
+                        Previous
+                    </button>
+                    <button className="stats-slider-button" onClick={next} aria-label="Next Player">
+                        Next
+                    </button>
                 </div>
             </section>
         </>

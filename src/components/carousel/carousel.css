@@ -4,6 +4,7 @@
     margin: 0 auto;
     position: relative;
     padding-top: 5em;
+    height: 950px;
 }
 
 .slide {
@@ -15,7 +16,8 @@
 .slide-image {
     width: 100%;
     height: 100%;
-    object-fit: none;
+    object-fit: cover;
+    object-position: top;
     opacity: 1;
 }
 
@@ -37,12 +39,15 @@
 /* Slide Text Styling */
 .slide hgroup {
     position: relative;
-    width: 80%;
+    width: 90%;
+    height: 400px;
     color: #333;
     background: white;
-    border-top: 2px solid var(--primary-nebraska-red);
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #bababa 0, #fff 350px);
+    border-image-slice: 1;
     z-index: 2;
-    top: -15em;
+    top: -25%;
     left: 0;
     padding: 2em 1em;
     margin: 0 auto;
@@ -103,14 +108,11 @@
         width: 95%;
         margin: 0 auto;
         padding: 9em 0 2em 0;
+        height: auto;
     }
     
     .slide {
         height: 700px;
-    }
-
-    .slide-image {
-        object-fit: cover;
     }
 
     .slick-dots {

@@ -1,5 +1,9 @@
-#stats-container {
-    background-color: #fdf8f8;
+#stats {
+    width: 100%;
+}
+
+#stats p.card-jersey-number {
+    font-size: 1.2em;
 }
 
 .stats-container p, .stats-container td {
@@ -50,6 +54,7 @@ tr.stats-row:nth-child(odd) {
     padding: 0.35em;
     background-color: #f3f3f3;
     border-radius: 50px;
+    margin-top: 12px;
 }
 
 .toggle-container button.toggle-button {
@@ -71,6 +76,61 @@ tr.stats-row:nth-child(odd) {
     background-color: var(--primary-nebraska-red);
 }
 
+/* Mobile Stats Card */
+.stats-card-container {
+    text-align: center;
+    padding: 0 0.2em;
+}
+
+.stats-card {
+    color: var(--text-dark);
+    text-align: center;
+    border: 1px solid var(--primary-nebraska-red);
+    border-radius: 8px;
+    margin-top: 16px;
+    
+}
+
+.stats-card h3 {
+    background-color: var(--primary-nebraska-red);
+    border-radius: 6px 6px 2px 2px;
+    padding: 8px 0;
+    color: #fff;
+    font-weight: 400;
+}
+
+.stats-card .card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 16px 12px 20px 12px;
+    font-size: 1.2em;
+}
+
+.stats-card p.general-card-titles{
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* Stats next / prev buttons */
+.stats-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.stats-slider-button {
+    padding: 16px;
+    width: 125px;
+    border-radius: 4px;
+    border: 0;
+    background-color: var(--primary-nebraska-red);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+
 @media screen and (min-width: 768px) {
     .stats-desktop-container table {
         min-width: 100%;
@@ -83,6 +143,10 @@ tr.stats-row:nth-child(odd) {
 
     .stats-mobile-container {
         display: none;
+    }
+
+    .toggle-container {
+        margin-top: 0;
     }
 
     .stats-header {

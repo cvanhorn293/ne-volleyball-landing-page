@@ -2,6 +2,30 @@
 
 This will show the different changes done for the application. This will include assignment specific changes, what the assignment was, and when it was due. It will also have non-specific assignment updates that were done to make the landing page.
 
+## Nov 12, 2025
+
+P.M.
+
+- Finished stats section styling
+- Created new components for statCard
+  - StatCard
+    - Component to build the container for all of the StatBlock children
+    - Added a hidden prop to remove display of a card on mobile when "defensive" is selected
+    - {title, children, hidden} props
+  - StatBlock
+    - Goes inside of StatCard component
+    - Builds out individual children and the values needed
+    - {title, value} props
+- Updated various styling on elements to clean up design
+- Removed unneeded json file since I am updating stats through an API
+
+A.M.
+
+- Updated all stats
+- Added hide in global.css to display:none
+- Added new toggle with functionality to toggle based on the mode "offense" or "defense"
+- Started mobile design for stats
+
 ## Nov 11, 2025
 
 - Added new stats section
@@ -10,10 +34,6 @@ This will show the different changes done for the application. This will include
 - Hooked statistics API from NE site
 - Styled stats section
 - Removed border-spacing from tables in global.css
-- Updated all stats
-- Added hide in global.css to display:none
-- Added new toggle with functionality to toggle based on the mode "offense" or "defense"
-- Started mobile design for stats
 
 ## Nov 10, 2025
 
