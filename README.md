@@ -6,6 +6,15 @@ This will show the different changes done for the application. This will include
 
 P.M.
 
+- Removed links on navigation in place of hamburger menu
+- Added hover effect on desktop for list items in side-nav
+- Updated carousel styling so things are linked
+- Updated carouselData to have links and updated carousel data
+- Updated schedule and stats containers to have a scroll margin
+- Added windowResize hook
+- Updated buy tickets button for mobile/desktop to link
+- Updated nav links to link to everything
+- Most thinks now link either internally or externally
 - Finished stats section styling
 - Created new components for statCard
   - StatCard
